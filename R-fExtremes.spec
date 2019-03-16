@@ -4,15 +4,12 @@
 #
 Name     : R-fExtremes
 Version  : 3042.82
-Release  : 7
+Release  : 8
 URL      : https://cran.r-project.org/src/contrib/fExtremes_3042.82.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/fExtremes_3042.82.tar.gz
 Summary  : Rmetrics - Modelling Extreme Events in Finance
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-fBasics
-Requires: R-fGarch
-Requires: R-timeDate
 BuildRequires : R-fBasics
 BuildRequires : R-fGarch
 BuildRequires : R-timeDate
@@ -29,10 +26,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1545605956
+export SOURCE_DATE_EPOCH=1552715039
 
 %install
-export SOURCE_DATE_EPOCH=1545605956
+export SOURCE_DATE_EPOCH=1552715039
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -68,8 +65,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library fExtremes|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc fExtremes || :
 
 
 %files
@@ -98,10 +94,8 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/fExtremes/help/paths.rds
 /usr/lib64/R/library/fExtremes/html/00Index.html
 /usr/lib64/R/library/fExtremes/html/R.css
+/usr/lib64/R/library/fExtremes/tests/doRUnit.R
 /usr/lib64/R/library/fExtremes/unitTests/Makefile
-/usr/lib64/R/library/fExtremes/unitTests/report.html
-/usr/lib64/R/library/fExtremes/unitTests/report.txt
-/usr/lib64/R/library/fExtremes/unitTests/reportSummary.txt
 /usr/lib64/R/library/fExtremes/unitTests/runTests.R
 /usr/lib64/R/library/fExtremes/unitTests/runit.DataPreprocessing.R
 /usr/lib64/R/library/fExtremes/unitTests/runit.ExtremeIndex.R

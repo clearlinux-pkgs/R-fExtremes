@@ -4,15 +4,17 @@
 #
 Name     : R-fExtremes
 Version  : 3042.82
-Release  : 12
+Release  : 13
 URL      : https://cran.r-project.org/src/contrib/fExtremes_3042.82.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/fExtremes_3042.82.tar.gz
 Summary  : Rmetrics - Modelling Extreme Events in Finance
 Group    : Development/Tools
 License  : GPL-2.0+
+Requires: R-timeSeries
 BuildRequires : R-fBasics
 BuildRequires : R-fGarch
 BuildRequires : R-timeDate
+BuildRequires : R-timeSeries
 BuildRequires : buildreq-R
 
 %description
@@ -26,10 +28,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552715039
+export SOURCE_DATE_EPOCH=1556473334
 
 %install
-export SOURCE_DATE_EPOCH=1552715039
+export SOURCE_DATE_EPOCH=1556473334
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "

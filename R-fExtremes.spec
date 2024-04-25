@@ -7,7 +7,7 @@
 #
 Name     : R-fExtremes
 Version  : 4032.84
-Release  : 47
+Release  : 48
 URL      : https://cran.r-project.org/src/contrib/fExtremes_4032.84.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/fExtremes_4032.84.tar.gz
 Summary  : Rmetrics - Modelling Extreme Events in Finance
